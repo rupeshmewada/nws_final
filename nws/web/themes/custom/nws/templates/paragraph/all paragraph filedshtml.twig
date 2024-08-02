@@ -1,0 +1,43 @@
+<img src="/themes/custom/hmp/assets/images/arrow-right.png" alt="">
+
+<img src="{{ file_url(paragraph.field_image.entity.uri.value) }}" alt="">
+
+<a href="{{ paragraph.field_link.get(0).getUrl().toString() }}">
+	{{ paragraph.field_link.title }}</a>
+
+<a href="#" class="global-cta white">{{ paragraph.field_link.title }}</a>
+<a href="{{ file_url(paragraph.field_upload.entity.uri.value) }}">Download</a>
+
+
+for get title only
+{{ paragraph.field_link.title }}
+
+title with link
+{{ content.field_link }}
+{{ content.field_link_desc }}
+
+{{ content.field_content }}
+{{ content.field_multi_image }}
+
+<h4>{{ paragraph.field_descriptor.value|raw }}</h4>
+{{ paragraph.field_descriptions.value|raw }}
+
+{{ content.field_multi_com }}
+
+{{ content.field_card }}
+<li class="{{ paragraph.field_color.value|raw }}">
+
+	<section class="banner-section" style="background-image: url('{{ file_url(paragraph.field_media_background_image.entity.uri.value) }}')">
+		<img src="{{ file_url(paragraph.field_media_image.entity.uri.value) }}" alt="" width="1372" height="446" class="ccm-image-block img-responsive bID-498">
+	</section>
+
+	<text>{{ paragraph.field_milestone_year.value[0:1] }}</tspan>
+</li></text><text>{{ paragraph.field_milestone_year.value[1:1] }}</tspan></text>{{ content.field_link }}{{ content.field_tab }}<h4>{{ content.field_credential_items }}</h4><p>{# anchor  #}<a href="{{ paragraph.field_link.get(0).getUrl().toString() }}" class="global-cta white lg mt-4">
+{{ paragraph.field_link.title }}</a></p><video width="100%" autoplay><source src="{{ file_url(paragraph.field_video.entity.uri.value) }}" type="video/mp4">Your browser does not support HTML video.</video><div class="service-image lozad" style="background-image: url('{{ file_url(paragraph.field_image.entity.uri.value) }}');"></div><section class="banner-sm md" style="background-image: url('{{ file_url(paragraph.field_banner_image.entity.uri.value) }}');"><div class="text-center">
+<h2>{{ paragraph.field_title.value }}</h2></div></section><a href="{{ paragraph.field_link.get(0).getUrl().toString() }}" class="global-cta white">{{ paragraph.field_link.title }}</a><div class="img">{{ content.field_multi_image }}</div><a href="{{ paragraph.field_link.get(0).getUrl().toString() }}" class="global-cta white lg mt-4">{{ paragraph.field_link.title }}</a><a href="{{ paragraph.field_link.get(0).getUrl().toString() }}" class="link">{{ paragraph.field_link.title }}<section class="banner">
+<video width="100%" autoplay>
+	<source src="{{ file_url(paragraph.field_video.entity.uri.value) }}" type="video/mp4">
+	Your browser does not support HTML video.
+</video></section><a class="download" target="_blank" href="{{ file_url(paragraph.field_document.entity.uri.value) }}">
+<i class="icon-download"></i>
+DOWNLOAD</a>

@@ -1,0 +1,10 @@
+name: 'Social Feed'
+type: module
+description: 'Provides users an option to easily fetch feeds from Facebook, Twitter, or Instagram and then display them accordingly using block.'
+core_version_requirement: ^8.8 || ^9 || ^10
+configure: socialfeed.configuration
+
+# Information added by Drupal.org packaging script on 2023-01-23
+version: '2.0.0-beta2'
+project: 'socialfeed'
+datestamp: 1674464199

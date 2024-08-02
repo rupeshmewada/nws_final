@@ -1,0 +1,447 @@
+{#
+/**
+* @file
+* Bartik's theme implementation to display a single page.
+*
+* The doctype, html, head and body tags are not in this template. Instead they
+* can be found in the html.html.twig template normally located in the
+* core/modules/system directory.
+*
+* Available variables:
+*
+* General utility variables:
+* - base_path: The base URL path of the Drupal installation. Will usually be
+* "/" unless you have installed Drupal in a sub-directory.
+* - is_front: A flag indicating if the current page is the front page.
+* - logged_in: A flag indicating if the user is registered and signed in.
+* - is_admin: A flag indicating if the user has permission to access
+* administration pages.
+*
+* Site identity:
+* - front_page: The URL of the front page. Use this instead of base_path when
+* linking to the fro10pxnt page. This includes the language domain or prefix.
+*
+* Page content (in order of occurrence in the default page.html.twig):
+* - node: Fully loaded node, if there is an automatically-loaded node
+* associated with the page and the node ID is the second argument in the
+* page's path (e.g. node/12345 and node/12345/revisions, but not
+* comment/reply/12345).
+*
+* Regions:
+* - page.header: Items for the header region.
+* - page.highlighted: Items for the highlighted region.
+* - page.primary_menu: Items for the primary menu region.
+* - page.secondary_menu: Items for the secondary menu region.
+* - page.featured_top: Items for the featured top region.
+* - page.content: The main content of the current page.
+* - page.sidebar_first: Items for the first sidebar.
+* - page.sidebar_second: Items for the second sidebar.
+* - page.featured_bottom_first: Items for the first featured bottom region.
+* - page.featured_bottom_second: Items for the second featured bottom region.
+* - page.featured_bottom_third: Items for the third featured bottom region.
+* - page.footer_first: Items for the first footer column.
+* - page.footer_second: Items for the second footer column.
+* - page.footer_third: Items for the third footer column.
+* - page.footer_fourth: Items for the fourth footer column.
+* - page.footer_fifth: Items for the fifth footer column.
+* - page.breadcrumb: Items for the breadcrumb region.
+*
+* @see template_preprocess_page()
+* @see html.html.twig
+*/
+#}
+
+  {# <img src="{{url('<front>')}}/themes/custom/nws/{{url('<front>')}}/themes/custom/nws/images/logo.svg" alt="Al Ramz - Al Ramz Corporation PJSC - WE LIVE BY OUR WORD" /> #}
+
+
+
+  <header>
+    <div class="container header-top">
+    {{ page.logo }}
+      {# <a href="#" class="logo">
+        <img src="{{url('<front>')}}/themes/custom/nws/assets/images/logo.png" alt="">
+      </a> #}
+
+      {# old code  #}
+      {# <div class="only-mob menu-open mobile-menu">
+        <img src="{{url('<front>')}}/themes/custom/nws/assets/images/humberger.png" alt="" class="open">
+        <img src="{{url('<front>')}}/themes/custom/nws/assets/images/close.png" alt="" class="close">
+      </div> #}
+
+      <div class="menus only-desk">
+      {{ page.primary_menu }}
+        {# <ul>
+          <li><a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/home.svg" alt="">Home</a></li>
+          <li><a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/search.svg" alt="">Search</a></li>
+          <li><a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/email.svg" alt="">Contact</a></li>
+        </ul> #}
+      </div>
+    </div>
+
+    <div class="mobile-bottom-header only-mob">
+      <a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/search.svg" alt=""></a>
+      <div class="only-mob menu-open mobile-menu">
+        <img src="{{url('<front>')}}/themes/custom/nws/assets/images/humberger.svg" alt="" class="open">
+        <img src="{{url('<front>')}}/themes/custom/nws/assets/images/close.svg" alt="" class="close">
+      </div>
+    </div>
+
+    <div class="bottom-header">
+      <div class="container">
+      {{ page.secondary_menu }}
+        {# <ul>
+          <li><a href="#">Who we are</a></li>
+          <li><a href="#">What we do</a></li>
+          <li><a href="#">Flatback turtles</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Get involved</a></li>
+
+         <li class="has-children only-mob">
+            <a href="#">Dropdown</a>
+            <ul class="sub-menu">
+              <li><a href="#">Who we are</a></li>
+              <li><a href="#">What we do</a></li>
+              <li><a href="#">Flatback turtles</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Get involved</a></li>
+            </ul>
+          </li>
+
+
+        </ul> #}
+      </div>
+    </div>
+  </header>
+
+
+    {{ page.banner }}
+  {#
+  <section class="banner">
+    <div class="container">
+      <div class="banner-text">
+        <h2>North West Shelf Flatback Turtle Conservation Program</h2>
+        <h4 class="sun-color text-23">Protecting flatback turtles, their nesting beaches, and foraging habitats</h4>
+      </div>
+    </div>
+  </section>
+   #}
+
+
+  <section class="text-sec">
+    <div class="container">
+         {{ page.features }}
+      {# <div class="row"> #}
+        {# <div class="col-md-6 col-12">
+          <div class="text-sec-image">
+            <img src="{{url('<front>')}}/themes/custom/nws/assets/images/flatbacks" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="text-sec-content">
+            <h2 class="heading-sm">Why flatbacks?</h4>
+              <p>Text about the need for flatback turtle research and conservation, mention MSP broader role in turtle
+                management. Lorem ipsum dolor sit amet consectetur. Eu elementum at volutpat feugiat. Et id eget quis
+                feugiat felis aliquet volutpat vulputate. </p>
+              <a href="#" class="global-cta">Flatback turtles</a>
+          </div>
+        </div>#}
+      {# </div> #}
+    </div>
+  </section>
+
+  <section class="text-sec reversed pt-0">
+    <div class="container">
+         {{ page.features2 }}
+      {# <div class="row"> #}
+
+        {# <div class="col-md-6">
+          <div class="text-sec-content">
+            <h2 class="heading-sm">Headline goes here</h4>
+              <p>Lorem ipsum dolor sit amet consectetur. Eu elementum at volutpat feugiat. Et id eget quis feugiat felis
+                aliquet volutpat vulputate. Lorem ipsum dolor sit amet consectetur. Eu elementum at volutpat feugiat. Et
+                id eget quis feugiat felis aliquet volutpat vulputate. </p>
+              <a href="#" class="global-cta">Our work</a>
+          </div>
+        </div>appearance
+        <div class="col-md-6">
+          <div class="text-sec-image">
+            <img src="{{url('<front>')}}/themes/custom/nws/assets/images/flatback-2" alt="">
+          </div>
+        </div> #}
+      {# </div> #}
+    </div>
+  </section>
+
+
+  <section class="what-we-do">
+    <div class="container">
+
+      {# <h2 class="heading">What we do</h2> #}
+          {{ page.what_we_do }}
+
+    {#<div class="row" data-aos="fade-up">
+        <div class="col-md-4 col-12">
+          <div class="card-box">
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/research.png" alt="">
+            </div>
+            <a href="#" class="link">Research</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="card-box">
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/monitoring.png" alt="">
+            </div>
+            <a href="#" class="link">Monitoring</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="card-box">
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/education.png" alt="">
+            </div>
+            <a href="#" class="link">Education and communication</a>
+          </div>
+        </div>
+      </div> #}
+    </div>
+  </section>
+
+  <section class="what-we-do latest-updates">
+    <div class="container">
+      {# <h2 class="heading">Latest updates</h2>
+      <a href="#" class="link-sm">See all updates</a> #}
+       {{ page.latest_updates }}
+      {# <div class="row" data-aos="fade-up">
+        <div class="col-md-4 col-12">
+          <a href="" class="card-box">
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+            <h6 class="meta">XX Month</h6>
+            <h4 class="text-23">This is a news item headline</h4>
+            <p>Lorem ipsum dolor sit amet consectetur. Pretium enim ornare venenatis vel varius neque cras. Aliquet sed
+              fringilla.</p>
+            <a href="#" class="link-icon"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/ArrowRight.png" alt=""></a>
+          </div>
+        <div class="col-md-4 col-12">
+          <a href="" class="card-box">
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+            <h6 class="meta">XX Month</h6>
+            <h4 class="text-23">This is a news item headline</h4>
+            <p>Lorem ipsum dolor sit amet consectetur. Pretium enim ornare venenatis vel varius neque cras. Aliquet sed
+              fringilla.</p>
+            <a href="#" class="link-icon"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/ArrowRight.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-12">
+          <a href="" class="card-box">
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+            <h6 class="meta">XX Month</h6>
+            <h4 class="text-23">This is a news item headline</h4>
+            <p>Lorem ipsum dolor sit amet consectetur. Pretium enim ornare venenatis vel varius neque cras. Aliquet sed
+              fringilla.</p>
+            <a href="#" class="link-icon"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/ArrowRight.png" alt=""></a>
+        </div>
+      </div> #}
+    </div>
+  </section>
+
+
+<section class="what-we-do on-socials">
+    <div class="container">
+      <h2 class="heading">On the socials</h2>
+      <div class="row" data-aos="fade-up-fast">
+        <div class="col-md-3 col-12">
+          <div class="card-box">
+            <div class="media-handle">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-instagram-filled.svg" alt="">
+              <div class="media-cnt">
+                <a href="#">Media_handle</a>
+                <p>Posted X weeks ago</p>
+              </div>
+            </div>
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card-box">
+            <div class="media-handle">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-facebooks.svg" alt="">
+              <div class="media-cnt">
+                <a href="#">Media_handle</a>
+                <p>Posted X weeks ago</p>
+              </div>
+            </div>
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card-box">
+            <div class="media-handle">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-instagram-filled.svg" alt="">
+              <div class="media-cnt">
+                <a href="#">Media_handle</a>
+                <p>Posted X weeks ago</p>
+              </div>
+            </div>
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card-box">
+            <div class="media-handle">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-facebooks.svg" alt="">
+              <div class="media-cnt">
+                <a href="#">Media_handle</a>
+                <p>Posted X weeks ago</p>
+              </div>
+            </div>
+            <div class="card-box-image">
+              <img src="{{url('<front>')}}/themes/custom/nws/assets/images/turtle.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ page.get_involved }}
+  {# <section class="involved">
+    <div class="container">
+       <div class="get-involved" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
+       <div class="involved-content">
+        <h4 class="text-33">Get involved</h4>
+        <h5 class="text-19">Text about getting involved in volunteering. Link to Opportunities to volunteers page. Lorem
+          ipsum dolor onsectetur. Sed in sapien aliquet.</h5>
+        <a href="#" class="global-cta">Opportunities for volunteering</a>
+       </div>
+      </div>
+    </div>
+  </section> #}
+
+
+  <section class="acknowledgement">
+    <div class="container">
+    {{ page.acknowledgement }}
+      {# <h4 class="text-27">Acknowledgement of Country</h4>
+      <p>The Government of Western Australia acknowledges the traditional owners throughout Western Australia and their
+        continuing connection to the land, waters and community. We pay our respects to all members of the Aboriginal
+        communities and their cultures; and to Elders both past and present.</p> #}
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+    {{ page.footer_top }}
+      {# <div class="footer-top">
+        <div class="logo">
+          <img src="{{url('<front>')}}/themes/custom/nws/assets/images/logo.png" alt="">
+        </div>
+        <h4 class="text-23">If you've found injured wildlife, call the Wildcare Helpline on 61 8 9474 9055.</h4>
+      </div> #}
+      <div class="footer-middle">
+        {{ page.footer_social }}
+        {# <div class="socials"> #}
+          {# <a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-facebook.svg" alt=""></a>
+          <a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-linkedin.svg" alt=""></a>
+          <a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-instagram.svg" alt=""></a>
+          <a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/icon-email.svg" alt=""></a> #}
+        {# </div> #}
+
+        <div class="footer-menus">
+
+          <div class="f-menus">
+            <div class="f-inner">
+            {{ page.footer_home }}
+            {# <h5 class="title">Home</h5> #}
+              {# <a href="#">Latest updates</a>
+              <a href="#">Contact</a> #}
+            </div>
+          </div>
+
+          <div class="f-menus">
+            <div class="f-inner">
+            {{ page.footer_who_we_are }}
+            {# <h5 class="title">Who we are</h5>
+              <a href="#">Our people</a>
+              <a href="#">Governance</a>
+              <a href="#">Indigenous collaboration</a>
+              <a href="#">Project partners</a> #}
+            </div>
+          </div>
+
+          <div class="f-menus">
+            <div class="f-inner">
+            {{ page.footer_what_we_do }}
+            {# <h5 class="title">What we do</h5>
+              <a href="#">Research</a>
+              <a href="#">Monitoring</a>
+              <a href="#">Expert advice</a>
+              <a href="#">Education</a> #}
+            </div>
+          </div>
+
+          <div class="f-menus">
+            <div class="f-inner">
+            {{ page.footer_flatback_turtles }}
+
+            {# <h5 class="title">Flatback turtles</h5> #}
+              {# <a href="#">Flatback biology</a>
+              <a href="#">Flatback threats</a>
+              <a href="#">Flatback conservation</a>
+              <a href="#">Marine turtles of WA</a> #}
+            </div>
+          </div>
+          <div class="f-menus">
+            <div class="f-inner">
+            {{ page.footer_resources }}
+            {# <h5 class="title">Resources</h5> #}
+              {# <a href="#">Reports & plans</a>
+              <a href="#">Guidelines & policies</a>
+              <a href="#">Monitoring</a>AOS.init({
+      duration: 1000,
+    });lock-content--type--banner.html copy.twig
+              <a href="#">Education</a> #}
+            </div>
+          </div>
+          <div class="f-menus">
+            {# <h5 class="title">Get involved</h5> #}
+            <div class="f-inner">
+            {{ page.footer_get_involved }}
+            {# <h5 class="title">Get involved</h5> #}
+              {# <a href="#">Job opportunities</a>
+              <a href="#">Post-graduate students</a>
+              <a href="#">Volunteers</a>
+              <a href="#">School camps & incursions</a> #}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+      {{ page.footer_bottom }}
+        {# <div class="left">
+          <p>WA.gov.au</p>
+          <p>Copyright</p>
+          <p>Disclaimer</p>
+          <p>© Government of Western Australia 2024</p>
+        </div> #}
+      </div>
+    </div>
+  </footer>
+
+
+
+

@@ -1,0 +1,462 @@
+{#
+/**
+* @file
+* Bartik's theme implementation to display a single page.
+*
+* The doctype, html, head and body tags are not in this template. Instead they
+* can be found in the html.html.twig template normally located in the
+* core/modules/system directory.
+*
+* Available variables:
+*
+* General utility variables:
+* - base_path: The base URL path of the Drupal installation. Will usually be
+* "/" unless you have installed Drupal in a sub-directory.
+* - is_front: A flag indicating if the current page is the front page.
+* - logged_in: A flag indicating if the user is registered and signed in.
+* - is_admin: A flag indicating if the user has permission to access
+* administration pages.
+*
+* Site identity:
+* - front_page: The URL of the front page. Use this instead of base_path when
+* linking to the front page. This includes the language domain or prefix.
+*
+* Page content (in order of occurrence in the default page.html.twig):
+* - node: Fully loaded node, if there is an automatically-loaded node
+* associated with the page and the node ID is the second argument in the
+* page's path (e.g. node/12345 and node/12345/revisions, but not
+* comment/reply/12345).
+*
+* Regions:
+* - page.header: Items for the header region.
+* - page.highlighted: Items for the highlighted region.
+* - page.primary_menu: Items for the primary menu region.
+* - page.secondary_menu: Items for the secondary menu region.
+* - page.featured_top: Items for the featured top region.
+* - page.content: The main content of the current page.
+* - page.sidebar_first: Items for the first sidebar.
+* - page.sidebar_second: Items for the second sidebar.
+* - page.featured_bottom_first: Items for the first featured bottom region.
+* - page.featured_bottom_second: Items for the second featured bottom region.
+* - page.featured_bottom_third: Items for the third featured bottom region.
+* - page.footer_first: Items for the first footer column.
+* - page.footer_second: Items for the second footer column.
+* - page.footer_third: Items for the third footer column.
+* - page.footer_fourth: Items for the fourth footer column.
+* - page.footer_fifth: Items for the fifth footer column.
+* - page.breadcrumb: Items for the breadcrumb region.
+*
+* @see template_preprocess_page()
+* @see html.html.twig
+*/
+#}
+
+
+<header>
+	<div class="container header-top">
+		{{ page.logo }}
+
+
+		<div class="menus only-desk">
+			{{ page.primary_menu }}
+
+		</div>
+	</div>
+
+	<div class="mobile-bottom-header only-mob">
+		<a href="#"><img src="{{url('<front>')}}/themes/custom/nws/assets/images/search.svg" alt=""></a>
+		<div class="only-mob menu-open mobile-menu">
+			<img src="{{url('<front>')}}/themes/custom/nws/assets/images/humberger.svg" alt="" class="open">
+			<img src="{{url('<front>')}}/themes/custom/nws/assets/images/close.svg" alt="" class="close">
+		</div>
+	</div>
+
+	<div class="bottom-header">
+		<div class="container">
+			{{ page.secondary_menu }}
+
+		</div>
+	</div>
+</header>
+
+
+<section class="banner-sm" style="background-image: url({{ url }});">
+	<div class="container">
+		<div class="banner-text">
+			<div class="breadcrumbs">
+				{{ drupal_breadcrumb() }}
+			</div>
+			<h2>{{ node_title }}</h2>
+		</div>
+	</div>
+</section>
+
+<section class="main cmn-padding mb-40">
+	<div class="container">
+		<div class="sidebar-layout">
+			<div class="leftside">
+				{{ page.content }}
+
+				{# <div class="mg-block">
+																	<h2 class="heading">Headline</h2>
+																	<p>Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan nulla.
+																		Adipiscing nulla gravida commodo condimentum quisque. Ut consequat vitae scelerisque gravida
+																		quis quis id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel sed ut quis
+																		adipiscing quisque neque scelerisque. Morbi hendrerit cras sed amet pellentesque vivamus
+																		porta interdum. Egestas tortor magnis ornare sit nunc purus nisl arcu odio.</p>
+																</div>
+																<div class="mg-block">
+																	<h2 class="heading">Subheadline</h2>
+																	<p>Morbi hendrerit cras sed amet pellentesque vivamus porta interdum. Egestas tortor magnis
+																		ornare sit nunc purus nisl arcu odio. Tristique phasellus molestie accumsan nulla.
+																		Adipiscing nulla gravida commodo condimentum. Ut conequat vitae scelerisque gravida quis
+																		quis id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel sed ut quis
+																		adipiscing quisque neque scelerisque. Morbi hendrerit cras sed amet pellentesque vivamus
+																		porta interdum. Egestas tortor magnis ornare sit nunc purus nisl arcu odio.</p>
+																	<p>Morbi hendrerit cras sed amet pellentesque vivamus porta interdum. Egestas tortor magnis
+																		ornare sit nunc purus nisl arcu odio. Tristique phasellus molestie accumsan nulla.
+																		Adipiscing nulla gravida commodo condimentum. Ut conequat vitae scelerisque gravida quis
+																		quis id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel sed ut quis
+																		adipiscing quisque neque scelerisque. Morbi hendrerit cras sed amet pellentesque vivamus
+																		porta interdum. Egestas tortor magnis ornare sit nunc purus nisl arcu odio.</p>
+																</div>
+																<div class="mg-block">
+																	<h2 class="heading">Subheadline</h2>
+																	<p>Morbi hendrerit cras sed amet pellentesque vivamus porta interdum. Egestas tortor magnis
+																		ornare sit nunc purus nisl arcu odio. Tristique phasellus molestie accumsan nulla.
+																		Adipiscing nulla gravida commodo condimentum. Ut conequat vitae scelerisque gravida quis
+																		quis id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel sed ut quis
+																		adipiscing quisque neque scelerisque. Morbi hendrerit cras sed amet pellentesque vivamus
+																		porta interdum. Egestas tortor magnis ornare sit nunc purus nisl arcu odio.</p>
+																	<p>Morbi hendrerit cras sed amet pellentesque vivamus porta interdum. Egestas tortor magnis
+																		ornare sit nunc purus nisl arcu odio. Tristique phasellus molestie accumsan nulla.
+																		Adipiscing nulla gravida commodo condimentum. Ut conequat vitae scelerisque gravida quis
+																		quis id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel sed ut quis
+																		adipiscing quisque neque scelerisque. Morbi hendrerit cras sed amet pellentesque vivamus
+																		porta interdum. Egestas tortor magnis ornare sit nunc purus nisl arcu odio.</p>
+																</div>
+																<div class="mg-block">
+																	<h2 class="heading">Headline goes here</h2>
+																	<div class="map-area" data-aos="fade-up-fast">
+																		<img src="assets/images/map.png" alt="">
+																	</div>
+																	<p class="cmn-p">Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan
+																		nulla.
+																		Adipiscing nulla gravida commodo condimentum quisque. Ut consequat vitae scelerisque gravida
+																		quis quis
+																		id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel sed ut quis adipiscing
+																		quisque
+																		neque scelerisque. Morbi hendrerit cras sed amet pellentesque vivamus porta interdum.
+																		Egestas tortor
+																		magnis ornare sit nunc purus nisl arcu odio.</p>
+																</div>
+																<div class="mg-block">
+																	<h2 class="heading">Headline goes here</h2>
+																	<div class="single-image">
+																		<div class="text-sec-image img video">
+																			<img src="assets/images/who-we-are.png" alt="">
+																			<div class="play"><img src="assets/images/play.png" alt=""></div>
+																		</div>
+																		<p>Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan nulla.
+																			Adipiscing nulla gravida commodo condimentum quisque. Ut consequat vitae scelerisque
+																			gravida quis quis id vulputate porttitor. In et tristique mollis morbi dictum diam. Vel
+																			sed ut quis adipiscing quisque neque scelerisque. Morbi hendrerit cras sed amet
+																			pellentesque vivamus porta interdum. Egestas tortor magnis ornare sit nunc purus nisl
+																			arcu odio.</p>
+																	</div>
+																</div>
+																<div class="mg-block">
+																	<h2 class="heading">Headline goes here</h2>
+																	<div class="grid-2" data-aos="fade-up-fast">
+																		<div class="single-image">
+																			<div class="img">
+																				<img src="assets/images/turtle.png" alt="">
+																			</div>
+																			<p>Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan nulla.
+																				Adipiscing nulla gravida commodo condimentum.</p>
+																		</div>
+																		<div class="single-image">
+																			<div class="img">
+																				<img src="assets/images/turtle.png" alt="">
+																			</div>
+																			<p>Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan nulla.
+																				Adipiscing nulla gravida commodo condimentum.</p>
+																		</div>
+																		<div class="single-image">
+																			<div class="img">
+																				<img src="assets/images/turtle.png" alt="">
+																			</div>
+																			<p>Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan nulla.
+																				Adipiscing nulla gravida commodo condimentum.</p>
+																		</div>
+																		<div class="single-image">
+																			<div class="img">
+																				<img src="assets/images/turtle.png" alt="">
+																			</div>
+																			<p>Lorem ipsum dolor sit amet consectetur. Tristique phasellus molestie accumsan nulla.
+																				Adipiscing nulla gravida commodo condimentum.</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="mg-block bordered">
+																	<h2 class="heading">Research highlights</h2>
+																	<div class="dt-downloads">
+																		<div class="accordion">
+																			<div class="dtd">
+																				<p>Lorem ipsum dolor sit amet consectetur</p>
+																				<a href="#"><img src="assets/images/download-arrow.png" alt=""></a>
+																			</div>
+																			<div class="dtd-details">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+																				amet consectetur</div>
+																		</div>
+																		<div class="accordion">
+																			<div class="dtd">
+																				<p>Lorem ipsum dolor sit amet consectetur</p>
+																				<a href="#"><img src="assets/images/download-arrow.png" alt=""></a>
+																			</div>
+																			<div class="dtd-details">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+																				amet consectetur</div>
+																		</div>
+																		<div class="accordion">
+																			<div class="dtd">
+																				<p>Lorem ipsum dolor sit amet consectetur</p>
+																				<a href="#"><img src="assets/images/download-arrow.png" alt=""></a>
+																			</div>
+																			<div class="dtd-details">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+																				amet consectetur</div>
+																		</div>
+																		<div class="accordion">
+																			<div class="dtd">
+																				<p>Lorem ipsum dolor sit amet consectetur</p>
+																				<a href="#"><img src="assets/images/download-arrow.png" alt=""></a>
+																			</div>
+																			<div class="dtd-details">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+																				amet consectetur</div>
+																		</div>
+																		<div class="accordion">
+																			<div class="dtd">
+																				<p>Lorem ipsum dolor sit amet consectetur</p>
+																				<a href="#"><img src="assets/images/download-arrow.png" alt=""></a>
+																			</div>
+																			<div class="dtd-details">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+																				amet consectetur</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="mg-block bordered">
+																	<h2 class="heading">Resources</h2>
+																	<div class="publications">
+																		<div class="pubs">
+																			<div class="icon">
+																				<img src="assets/images/pub-icon.png" alt="">
+																			</div>
+																			<div class="pub-content">
+																				<h4 class="text-13">Authors Name(s) Here</h4>
+																				<a href="#">Article headline here lorem ipsum dolor sit amet consectetur</a>
+																			</div>
+																		</div>
+																		<div class="pubs">
+																			<div class="icon">
+																				<img src="assets/images/pub-icon.png" alt="">
+																			</div>
+																			<div class="pub-content">
+																				<h4 class="text-13">Authors Name(s) Here</h4>
+																				<a href="#">Article headline here lorem ipsum dolor sit amet consectetur</a>
+																			</div>
+																		</div>
+																		<div class="pubs">
+																			<div class="icon">
+																				<img src="assets/images/pub-icon.png" alt="">
+																			</div>
+																			<div class="pub-content">
+																				<h4 class="text-13">Authors Name(s) Here</h4>
+																				<a href="#">Article headline here lorem ipsum dolor sit amet consectetur</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="mg-block bordered">
+																	<h2 class="heading">Researchers</h2>
+																	<div class="researchers">
+																		<div class="researcher">
+																			<div class="img">
+																				<img src="assets/images/dummy-image.png" alt="">
+																			</div>
+																			<div class="researcher-content">
+																				<h4 class="text-23">Firstname Surname
+																				</h4>
+																				<p>Position Title goes here</p>
+																			</div>
+																		</div>
+																		<div class="researcher">
+																			<div class="img">
+																				<img src="assets/images/dummy-image.png" alt="">
+																			</div>
+																			<div class="researcher-content">
+																				<h4 class="text-23">Firstname Surname
+																				</h4>
+																				<p>Position Title goes here</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="mg-block bordered">
+																	<h2 class="heading">Project opportunities</h2>
+																	<div class="po-container">
+																		<div class="po">
+																			<div class="icon">
+																				<img src="assets/images/user-card.svg" alt="">
+																			</div>
+																			<div class="po-text">
+																				<h4 class="text-23">Title goes here lorem ipsum dolor</h4>
+																				<a class="link-l" href="../NWSFTCP/post-graduates-single.html">Find out more</a>
+																			</div>
+																		</div>
+																		<div class="po">
+																			<div class="icon">
+																				<img src="assets/images/user-card.svg" alt="">
+																			</div>
+																			<div class="po-text">
+																				<h4 class="text-23">Title goes here lorem ipsum dolor</h4>
+																				<a class="link-l" href="../NWSFTCP/post-graduates-single.html">Find out more</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																#}
+			</div>
+
+			<div class="right-bar">
+				{{ page.sidebar }}
+			</div>
+		</div>
+		{# <a class="active" href="../NWSFTCP/lifecycle-and-behaviour.html">Life cycle & behaviour</a>
+								<a href="../NWSFTCP/research.html"> <img src="assets/images/ArrowRight.svg" alt=""> Research
+									highlights</a>
+								<a href="../NWSFTCP/resources.html"> <img src="assets/images/ArrowRight.svg" alt=""> Resources</a>
+								<a href="#"> <img src="assets/images/ArrowRight.svg" alt=""> Researchers</a>
+								<a href="../NWSFTCP/project-partners.html"> <img src="assets/images/ArrowRight.svg" alt=""> Project
+									opportunities</a>
+								<a href="#">Genetics</a>
+								<a href="#">Where they nest</a>
+								<a href="#">Where they go</a>
+								<a href="#">Health</a> #}
+	</div>
+	{{ page.image_gallery }}
+{# <section class="bordered-top row-gap mt-80">
+				<div class="container">
+					<h2 class="heading">Other biology research areas</h2>
+					<div class="row" data-aos="fade-up-fast">
+						<div class="col-md-6 col-12">
+							<a href="" class="card-box">
+								<div class="card-box-image">
+									<img src="assets/images/turtle.png" alt="">
+								</div>
+								<a href="#" class="link">Genetics</a>
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<a href="" class="card-box">
+								<div class="card-box-image">
+									<img src="assets/images/turtle.png" alt="">
+								</div>
+								<a href="#" class="link">Where they nest</a>
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<a href="" class="card-box">
+								<div class="card-box-image">
+									<img src="assets/images/turtle.png" alt="">
+								</div>
+								<a href="#" class="link">Where they go</a>
+							</a>
+						</div>
+						<div class="col-md-6 col-12">
+							<a href="" class="card-box">
+								<div class="card-box-image">
+									<img src="assets/images/turtle.png" alt="">
+								</div>
+								<a href="#" class="link">Health</a>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section> #}
+	{# <section class="bordered-top row-gap cmn-padding pb-0">
+					<div class="container">
+						<h2 class="heading">Other research areas</h2>
+						<div class="row" data-aos="fade-up-fast">
+							<div class="col-md-6 col-12">
+								<a href="#" class="card-box">
+									<div class="card-box-image">
+										<img src="assets/images/turtle.png" alt="">
+									</div>
+									<a href="#" class="link">Threats</a>
+								</a>
+							</div>
+							<div class="col-md-6 col-12">
+								<a href="../NWSFTCP/research.html" class="card-box">
+									<div class="card-box-image">
+										<img src="assets/images/turtle.png" alt="">
+									</div>
+									<a href="../NWSFTCP/research.html" class="link">Other research</a>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section> #}
+</div></section>{{ page.feature_bottom }}{{ page.acknowledgement }}<footer>
+<div class="container">
+	{{ page.footer_top }}
+
+	<div class="footer-middle">
+		{{ page.footer_social }}
+
+		<div class="footer-menus">
+			<div class="f-menus">
+				<div class="f-inner">
+					{{ page.footer_home }}
+
+				</div>
+			</div>
+
+			<div class="f-menus">
+				<div class="f-inner">
+					{{ page.footer_who_we_are }}
+
+				</div>
+			</div>
+
+			<div class="f-menus">
+				<div class="f-inner">
+					{{ page.footer_what_we_do }}
+
+				</div>
+			</div>
+
+			<div class="f-menus">
+				<div class="f-inner">
+					{{ page.footer_flatback_turtles }}
+
+				</div>
+			</div>
+			<div class="f-menus">
+				<div class="f-inner">
+					{{ page.footer_resources }}
+
+				</div>
+			</div>
+			<div class="f-menus">
+
+				<div class="f-inner">
+					{{ page.footer_get_involved }}
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		{{ page.footer_bottom }}
+
+	</div>
+</div></footer>

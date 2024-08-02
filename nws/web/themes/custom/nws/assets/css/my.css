@@ -1,0 +1,617 @@
+
+/* my new css  */
+
+a.link:hover {
+    /* text-decoration: none; */
+    /* gap: 1rem; */
+  }
+  
+  .footer-menus .nav {
+    display: block;
+  }
+  
+  .footer-menus .nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .f-menus li:first-child a {
+    font-size: 1rem;
+    font-weight: 400 !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    margin-bottom: 0.75rem;
+  }
+  
+  .f-menus li {
+    margin-bottom: 0.75rem;
+  
+  }
+  
+  /* .view-what-we-do a:link::after {
+    content: '';
+    background-image: url(../images/ArrowRight.png);
+    display: block;
+    width: 2rem;
+    height: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  } */
+  
+  /* .what-we-do .view-what-we-do a{
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--deep);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in;
+  } */
+  /* .what-we-do .view-latest-updates .text-23 {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 37px;
+} */
+/* .view-latest-updates .card-box:hover .text-23 {
+    text-decoration: underline;
+} */
+  .five-card{
+    margin-bottom: 25px;
+  }
+
+
+.team-view-group{
+    border-top: 1px solid #E3E0DA;
+    margin-bottom: 5rem;
+    padding: 2.5rem 0; 
+    /* padding-bottom: 2.5rem; */
+}   
+
+
+/* primary tabs  */
+ul.tabs
+{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    /* margin-left: 30px; */
+    margin-bottom: 20px;
+}
+
+ul.tabs li a
+{
+color: #363636;
+text-decoration: none !important;
+cursor: pointer;
+outline: 0;
+}
+
+.cmb-padding {
+  padding-bottom: 120px ;
+}
+
+nav.breadcrumb{
+  background:none;
+
+}
+.breadcrumb ol {
+display: flex;
+margin-left: -50px;
+}
+.breadcrumb ol li{
+  list-style-type:none;
+}
+.breadcrumb ol li {
+  color: var(--deep);
+  font-size: 13px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+
+}
+
+.breadcrumb ol li a{
+  
+}
+
+.breadcrumb  a:not(:last-child)::after {
+  content: '';
+  background-image: url(../images/arrow-right-sm.png);
+  width: 4px;
+  height: 7px;
+  background-size: contain;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+
+.breadcrumb a::after {
+  content: '';
+  background-image: url(../images/arrow-right-sm.png);
+  width: 4px;
+  height: 7px;
+  background-size: contain;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.node-25 .involved {
+  /* margin-top: 200px; */
+
+}
+ .involved {
+  /* margin-top: 200px; */
+
+}
+
+.node-26 .reversed .container{
+  border-top: 0px solid #E3E0DA;
+  /* padding-top: 3rem; */
+}
+/* .bordered-top .container {
+  border-top: 1px solid #E3E0DA;
+  padding-top: 3rem;
+} */
+
+.cmn-top-padding {
+  padding-top: 120px;
+}
+
+/* form start  */
+
+#block-nws-webform .content, #block-nws-webform-2 .content{
+  max-width: 1280px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 120px; 
+}
+
+form .js-form-item {
+  margin-bottom: 1.75rem;
+}
+
+form .js-form-item label {
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+  display: block;
+  /* line-height: 20px; */
+}
+
+form .js-form-item>input,
+form .js-form-item textarea {
+  height: 60px;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  display: block;
+  width: 100%;
+  border: 1px solid #5B85AC;
+  color: var(--deep);
+}
+
+form .js-form-item textarea {
+  height: 200px;
+}
+form .js-form-type-radio{
+  display: flex;
+  gap: 1rem;
+}
+
+form .js-form-type-radio input {
+height: 28px !important;
+width: 28px !important;
+}
+
+form .js-form-item input::placeholder,
+form .js-form-item textarea::placeholder {
+  color: #5B85AC;
+  font-weight: 400;
+}
+
+form .form-actions .webform-button--submit{
+  font-weight: 500;
+  color: var(--deep);
+  border: 1px solid var(--deep);
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 2.5rem;
+  border-radius: 100px;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+  line-height: 32px;
+  justify-content: center;
+  background-color: white;
+}
+
+.form-type-checkbox {
+ 
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem !important;
+}
+.form-type-checkbox label, .js-form-type-radio label{
+ font-size: 1rem !important;
+  /* line-height: 28px; */
+  align-items: center !important;
+  cursor: pointer;
+
+}
+#edit-ii-am-interested-in--wrapper span{
+  font-size: 13px;
+}
+
+.js-form-type-checkbox input {
+  width: 28px !important;
+  height: 28px !important;
+} 
+
+.js-webform-radios .form-type-radio{
+  margin-bottom: 0px;
+}
+
+form .checkboxes--wrapper span, form .radios--wrapper span{
+font-size: 13px;
+}
+
+
+/* form end  */
+
+
+
+/* .node-51 .what-we-do{
+  padding-top: 120px;
+ padding-bottom: 0px;
+} */
+
+.node-51 .field__item:nth-child(2) .what-we-do:first-child .container{
+ padding-top: 120px;
+}
+
+/* .node-12 .what-we-do .container
+{
+  border-top: 1px solid #E3E0DA !important;
+    padding-top: 40px !important;
+} */
+
+.node-14 .what-we-do .container, 
+.node-22 .field__item:nth-child(2) .what-we-do .container,
+.node-28 .field__item:nth-child(2) .what-we-do .container{
+  padding-top: 120px ;
+}
+
+.node-24 .involved{
+  margin-top: 180px;
+}
+
+.node-26 .field--name-field-content .field__item:nth-child(4) .text-sec{
+padding: 0 0 120px 0 !important;
+}
+
+.node-26 .field--name-field-content .field__item:nth-child(6) .text-sec{
+  padding: 0 !important;
+
+  }
+.node-26 .field--name-field-content .field__item:nth-child(6) .text-sec .container{
+  border-top: 1px solid #E3E0DA !important;
+  /* padding-top: 5rem; */
+
+  }
+  .node-26 .field--name-field-content .field__item:nth-child(7) .text-sec {
+    padding: 0 0 40px 0;
+  
+    }
+    .node-26 .field--name-field-content .field__item:nth-child(8) .text-sec {
+      padding: 0 0 180px 0;
+    
+      }
+
+  #block-nws-otherbiologyresearchareas .field--name-field-content-detail .what-we-do{
+    padding: 0;
+  }
+  
+  #block-nws-otherbiologyresearchareas .field--name-field-content-detail .bordered-top .container{
+    padding-top: 0;
+
+  }
+
+  #block-nws-otherresearchareas .bordered-top .container {
+     margin-bottom: 120px;
+  }
+  #block-nws-otherresearchareas .bordered-top .container {
+    padding-top: 3rem;
+  }
+  #block-nws-otherbiologyresearchareas .bordered-top{
+  margin-top: -120px;
+
+  }
+
+  .node-54 .field--name-field-content-detail .what-we-do {
+    padding: 0;
+  }
+/* .node-54 .field--name-field-content-detail .bordered-top{
+  margin-top: 120px;
+} */
+
+.node-54 .field--name-field-content-detail .bordered-top .container,
+.node-57 .field--name-field-content-detail .bordered-top .container{
+  border-top: 0;
+}
+
+.node-54 .field--name-field-content-detail .bordered-top {
+  margin-bottom: -80px;
+}
+
+  #block-nws-otherschoolengagement .bordered-top{
+    padding-bottom: 120px;
+  }
+
+  .node-56 .bordered-top{
+    margin: -120px 0 120px 0;
+  }
+  .node-56 .field--name-field-content-detail .what-we-do{
+    padding-top: 50px;
+  }
+
+  .node-57 .field--name-field-content-detail .mg-block{
+    margin-top: 80px;
+    margin-bottom: -80px;
+  }
+  #block-nws-imagegallery .bordered-top{
+    margin-bottom: 180px;
+  }
+
+  .right-bar nav ul{
+    display: block;
+   
+}
+
+.right-bar nav ul .menu li{
+  list-style: none;
+}
+
+.po{
+  margin: 15px 0;
+}
+
+#block-nws-peerbottomblock .cmn-padding{
+padding: 80px 0;
+}
+
+.form--inline{
+  flex: 1;
+}
+form .fieldgroup, .form-item-title-1 label, .form-item-field-years-value label{
+    font-size: 27px !important;
+    font-weight: 400;
+    /* line-height: 40px; */
+}
+form .fieldgroup {
+  /* border-bottom: 1px solid #5B85AC;
+  padding-bottom: 60px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; */
+}
+
+.form-actions .js-form-submit{
+  background: transparent;
+  font-weight: 500;
+  color: var(--deep);
+  border: 1px solid var(--deep);
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 2.5rem;
+  border-radius: 100px;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+  line-height: 32px;
+  justify-content: center;
+}
+
+
+form .view-peer-reviewed-research .form--inline .form-item{
+  border-bottom: 1px solid #5B85AC;
+  padding-bottom: 60px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.enquire-form{
+  padding-bottom: 0px;
+}
+
+#block-nws-content .form-item-title-1, #block-nws-content .form-item-field-years-value,#block-nws-content .fieldgroup {
+  border-bottom: 1px solid #5B85AC;
+    padding-bottom: 60px;
+    margin-bottom: 1.5rem;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#edit-field-years-value .form-checkboxes {
+  display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 45rem;
+    gap: 1rem;
+}
+
+#edit-field-science-stand-value .form-checkboxes, #edit-field-subjects-value .bef-checkboxes{
+  display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 45rem;
+    gap: 1rem;
+}
+#edit-field-category-value--wrapper .bef-checkboxes{
+  display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 65rem;
+    gap: 1rem;
+}
+
+legend
+{
+  margin-bottom: 1.5rem;
+}
+
+.form--inline .form-text
+{
+  height: 66px;
+  border: 1px solid #5B85AC;
+  border-radius: 5px;
+  padding: 0 2rem;
+  max-width: 500px;
+  display: block;
+  outline: none;
+  color: #000;
+  background: transparent;
+}
+
+ .form--inline  .form-select
+{
+  height: 66px;
+  border: 1px solid #5B85AC;
+  border-radius: 5px;
+  padding: 0 2rem;
+  width: 280px;
+  display: block;
+  outline: none;
+  color: #000;
+  background: transparent;
+}
+
+.node-21 .what-we-do {
+  padding: 120px;
+}
+.node-21 .what-we-do .container{
+  border-top: 0;
+}
+.node-17 .field--name-field-content-detail .what-we-do{
+  padding: 0 0 120px 0;
+}
+.node-30 .bordered-top{
+  padding: 0;
+}
+
+.node-30 .what-we-do .container{
+  border-top: 1px solid #E3E0DA !important;
+  padding-top: 3rem !important;
+ 
+}
+.node-22 .field__item:nth-child(2) .what-we-do .container,
+
+.node-26 .field--name-field-content .field__item:nth-child(2) .text-sec {
+  padding: 120px 0;
+}
+
+.cmn-padding nav.padding{
+  margin-top: 5rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ nav.pager{
+  margin-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+ nav.pager ul{
+  display: flex;
+  gap: 3rem;
+}
+ nav.pager ul li{
+  list-style: none;
+}
+nav.pager ul li a{
+  color:black;
+}
+
+
+ nav.pager::before{
+
+  content: '';
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    margin-top: -10px;
+    border-radius: 50%;
+    background-image: url(../images/ArrowRight.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -2rem;
+    position: absolute;
+      transform: rotate(180deg);
+    
+}
+
+nav.pager ul::after{
+  content: '';
+  display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-image: url(../images/ArrowRight.png);
+    background-repeat: no-repeat;
+    margin-top: -10px;
+    background-position: center;
+  
+   
+}
+
+ nav.pager .pager__item--first,
+ nav.pager .pager__item--previous,
+ nav.pager .pager__item--next,
+ nav.pager .pager__item--last{
+display: none;
+}
+
+.results-section .cmn-padding .results-section{
+      padding: 60px 0;
+}
+
+form .form-item-title-1::after{
+  content: '';
+  display: inline-block;
+  width: 1rem; 
+  height: 1rem;
+  background-image: url(../images/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: -2rem;
+  position: absolute;
+    right: 42rem;
+    top: 11rem;
+}
+
+form .form-item-field-years-value::after{
+  content: '';
+  display: inline-block;
+  width: 1rem; 
+  height: 1rem;
+  background-image: url(../images/Polygon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: -2rem;
+  position: absolute;
+    left: 393px;
+    top: 380px;
+}
+
+.video-message{
+  margin-bottom: 150px;
+}

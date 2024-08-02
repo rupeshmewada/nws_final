@@ -1,0 +1,53 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# Change record https://www.drupal.org/node/2673014.
+# As the UI of Drupal improves between minor versions, the mark up and assets
+# in the coffee theme will change. The coffee theme is not backwards
+# compatible. If you wish to modify the output or assets of coffee you can:
+# 1. Copy the whole of coffee and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with coffee's
+# bug fixes and feature support.
+#
+# 2. Sub-theme coffee. This is only recommended if you want to make minor
+# tweaks and understand that coffee could break your modifications as it
+# changes.
+
+name: nws
+type: theme
+base theme: false
+description: " NWS is my custom theme."
+package: Core
+core_version_requirement: ^9 || ^10
+version: VERSION
+libraries:
+  - nws/global-styling
+  - nws/global-script
+  - core/normalize
+
+regions:
+  logo: "Logo"
+  primary_menu: "Primary menu"
+  secondary_menu: "Secondary menu"
+  banner: "Banner"
+  features: "Features"
+  features2: "Features2"
+  what_we_do: "What we do"
+  latest_updates: "Latest updates"
+  on_the_socials: "On the socials"
+  get_involved: "Get involved"
+  banner_detail: "Banner Detail"
+  sidebar: "Sidebar"
+  content: "Content"
+  image_gallery: "Image Gallery"
+  feature_bottom: "Feature Bottom"
+  acknowledgement: "Acknowledgement"
+  footer_top: "Footer Top"
+  footer_social: "Footer Social"
+  footer_home: "Footer Home"
+  footer_who_we_are: "Footer Who we are"
+  footer_what_we_do: "Footer What we do"
+  footer_flatback_turtles: "Footer Flatback turtles"
+  footer_resources: "Footer Resources"
+  footer_get_involved: "Footer Get involved"
+  footer_bottom: "Footer Bottom"
+  footer_copy_write: "Footer Copy Write"

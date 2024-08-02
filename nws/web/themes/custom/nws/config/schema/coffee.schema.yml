@@ -1,0 +1,5 @@
+# Schema for the configuration files of the happily theme.
+
+coffee.settings:
+  type: theme_settings
+  label: 'coffee settings'
